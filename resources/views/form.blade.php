@@ -22,12 +22,7 @@
    <div class="col-md-6 col-sm-6 col-xs-12">
     <form method="post" action="{{ route('files.store') }}"  enctype="multipart/form-data">
     {{ csrf_field() }}
-     <div class="form-group ">
-      <label class="control-label " for="name">
-       Name
-      </label>
-      <input class="form-control" id="name" name="name" type="text"/>
-     </div>
+    @include('text', ['data' => 'nome'])
      <div class="form-group ">
      <label class="btn btn-default">
         Browse <input type="file" name="file" hidden>
